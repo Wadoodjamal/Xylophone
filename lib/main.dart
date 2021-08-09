@@ -26,9 +26,8 @@ class xylophone extends StatefulWidget {
 }
 
 class _xylophoneState extends State<xylophone> {
-
   //This method will set the state of the playing sound
-  void playSound(int buttonNumber){
+  void playSound(int buttonNumber) {
     setState(() {
       final player = AudioCache();
       player.play('note$buttonNumber.wav');
@@ -40,67 +39,81 @@ class _xylophoneState extends State<xylophone> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        TextButton(
-          onPressed: () {
-            playSound(1);  
-          },
-          child: Container(
-            height: 80.0,
-            color: Colors.black,
+        Expanded(
+          child: TextButton(
+            onPressed: () {
+              playSound(1);
+            },
+            child: Container(
+              color: Colors.black,
+            ),
+            style: TextButton.styleFrom(padding: EdgeInsets.all(0)),
           ),
         ),
-        TextButton(
-          onPressed: () {
-            playSound(2);
-          },
-          child: Container(
-            height: 80.0,
-            color: Colors.blue,
+        Expanded(
+          child: TextButton(
+            onPressed: () {
+              playSound(2);
+            },
+            child: Container(
+              color: Colors.blue,
+            ),
+            style: TextButton.styleFrom(padding: EdgeInsets.all(0)),
           ),
         ),
-        TextButton(
-          onPressed: () {
-            playSound(3);
-          },
-          child: Container(
-            height: 80.0,
+        Expanded(
+          child: TextButton(
+            onPressed: () {
+              playSound(3);
+            },
+            child: Container(
               color: Colors.red,
             ),
-          ),
-        TextButton(
-          onPressed: () {
-            playSound(4);
-          },
-          child: Container(
-            height: 80.0,
-            color: Colors.green,
+            style: TextButton.styleFrom(padding: EdgeInsets.all(0)),
           ),
         ),
-        TextButton(
-          onPressed: () {
-            playSound(5);
-          },
-          child: Container(
-            height: 80.0,
-            color: Colors.teal,
+        Expanded(
+          child: TextButton(
+            onPressed: () {
+              playSound(4);
+            },
+            child: Container(
+              color: Colors.green,
+            ),
+            style: TextButton.styleFrom(padding: EdgeInsets.all(0)),
           ),
         ),
-        TextButton(
-          onPressed: () {
-            playSound(6);
-          },
-          child: Container(
-            height: 80.0,
-            color: Colors.yellow,
+        Expanded(
+          child: TextButton(
+            onPressed: () {
+              playSound(5);
+            },
+            child: Container(
+              color: Colors.teal,
+            ),
+            style: TextButton.styleFrom(padding: EdgeInsets.all(0)),
           ),
         ),
-        TextButton(
-          onPressed: () {
-            playSound(7);
-          },
-          child: Container(
-            height: 80.0,
-            color: Colors.white,
+        Expanded(
+          child: TextButton(
+            onPressed: () {
+              playSound(6);
+            },
+            child: Container(
+              color: Colors.white,
+            ),
+            style: TextButton.styleFrom(padding: EdgeInsets.all(0)),
+          ),
+        ),
+        Expanded(
+          child: TextButton(
+            onPressed: () {
+              playSound(7);
+            },
+            child: Container(
+              color: Colors.yellow,
+            ),
+            style: TextButton.styleFrom(padding: EdgeInsets.all(0)),
           ),
         ),
       ],
